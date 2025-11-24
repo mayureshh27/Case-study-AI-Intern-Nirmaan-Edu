@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+ENV/
+env/
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+test_*.py
+*_test.py
+verify_*.py
+debug_*.py
+inspect_*.py
+check_*.py
+
+# Environment
+.env
+.env.local
+
+# uv
+uv.lock
+.python-version
