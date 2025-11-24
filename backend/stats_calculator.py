@@ -5,9 +5,10 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 class StatsCalculator:
     def __init__(self):
         try:
-            self.grammar_tool = language_tool_python.LanguageTool('en-US')
-        except:
-            print("Warning: LanguageTool initialization failed. Grammar checking disabled.")
+            # Use public API to avoid starting local Java server (saves ~300MB RAM)
+            self.grammar_tool = language_tool_python.LanguageTool('en-US', remote_server='https://api.languagetool.org/v2/')
+        except Exception as e:
+            print(f"Warning: LanguageTool initialization failed: {e}")
             self.grammar_tool = None
         
         self.sentiment_analyzer = SentimentIntensityAnalyzer()
