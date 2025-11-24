@@ -6,3 +6,4 @@ sentence-transformers
 language-tool-python
 vaderSentiment
 pydantic
+requests
