@@ -1,17 +1,10 @@
-from sentence_transformers import SentenceTransformer
 from rubric_loader import RubricLoader
 from stats_calculator import StatsCalculator
 from transcript_scorer import TranscriptScorer
-import gc
 
 class Scorer:
     def __init__(self, excel_path: str):
         self.excel_path = excel_path
-        
-        print("Loading AI Models...")
-        self.model = SentenceTransformer('all-MiniLM-L6-v2')
-        # Explicitly collect garbage to free up memory after model loading
-        gc.collect()
         
         self.stats_calculator = StatsCalculator()
         

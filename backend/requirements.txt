@@ -2,7 +2,6 @@ fastapi
 uvicorn
 pandas
 openpyxl
-sentence-transformers
 language-tool-python
 vaderSentiment
 pydantic
