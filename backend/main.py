@@ -55,7 +55,7 @@ async def log_requests(request: Request, call_next):
     
     return response
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 EXCEL_PATH = os.path.join(BASE_DIR, "Case study for interns.xlsx")
 
 scorer = None

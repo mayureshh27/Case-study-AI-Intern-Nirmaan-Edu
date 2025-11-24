@@ -28,7 +28,7 @@ export interface ScoreResult {
     summary: ScoreSummary
 }
 
-const API_URL = 'http://localhost:8000'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export function useScoring() {
     const [loading, setLoading] = useState(false)
